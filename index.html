@@ -1,44 +1,14 @@
-
+<!DOCTYPE html>
 <html>
   <head>
-    <title>A-Frame Layer Component - Basic</title>
+    <meta charset="utf-8">
+    <title>Teaparty</title>
+    <meta name="description" content="Teaparty — JR-VR">
     <script src="https://aframe.io/releases/0.1.2/aframe.min.js"></script>
-  </head>
+</head>
   <body>
-
-    <a-assets>
-
-<!--
-      stereoscopic panoramic render by
-      http://pedrofe.com/rendering-for-oculus-rift-with-arnold/
-      http://www.meryproject.com/
- -->
-
-      <img id="Mary" src="textures/teatiem.png"></img>
-    </a-assets>
     <a-scene>
-
-
-      <a-camera position="0 0 10" cursor-visible="false" stereocam="eye:left;"></a-camera>
-
-      <a-entity geometry="primitive: sphere;
-                      radius: 100;
-                      segmentsWidth: 64;
-                      segmentsHeight: 64;"
-              material="shader: flat; src: #Mary;"
-              scale="-1 1 1" rotation="0 180 0" stereo="eye:left">
-      </a-entity>
-
-      <a-entity geometry="primitive: sphere;
-                      radius: 100;
-                      segmentsWidth: 64;
-                      segmentsHeight: 64;"
-              material="shader: flat; src: #Mary;"
-              scale="-1 1 1" rotation="0 180 0" stereo="eye:right">
-      </a-entity>
-
-
+      <a-sky src="http://i.imgur.com/cM54hcl.jpg" rotation="0 -130 0"></a-sky>
     </a-scene>
-
   </body>
 </html>
