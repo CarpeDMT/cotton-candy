@@ -6,17 +6,20 @@
     <meta name="description" content="Cotton-Dandy - - JRVR">
 
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-
-  </head>
+<!-- NOTE: somehow `aframe-video-shader` makes error 😢 so it's been `aframe-vid-shader.min.js` for now -->
+  <script src="https://rawgit.com/mayognaise/aframe-video-shader/master/dist/aframe-vid-shader.min.js"></script>
+</head>
   <body>
     <a-scene>
       <a-assets>
-        <video id="video" src="fUCK.mp4"
+        <video id="bbb" src="fUCK.mp4"
                sound="src: song.wma; autoplay: true; volume : .1 "
                autoplay loop crossorigin></video>
       </a-assets>
 
-      <a-videosphere src="#video" rotation="0 180 0"></a-videosphere>
+      <a-entity class="video" rotation="0 -90 0" geometry="primitive:sphere;radius:5000;" material="shader:video;src:#bbb;" scale="-1 1 1"></a-entity>
+
     </a-scene>
-  </body>
+
+</body>
 </html>
